@@ -1,1 +1,8 @@
 .vault_pass
+
+# SSH keys
+keys/
+
+# OpenTofu state
+*.tfstate
+*.tfstate.*

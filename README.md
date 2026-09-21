@@ -2,5 +2,5 @@
 
 - Mathis RINGENBACH / - Matys PHILLIPON-GOUIN / - Emré YAPMIS
 
-![art](bus.jpeg)
+![art](images/bus.jpeg)
 
