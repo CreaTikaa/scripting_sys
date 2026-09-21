@@ -5,5 +5,5 @@
 - Emré YAPMIS
 
 
-![art](bus.jpg)
+![art](bus.jpeg)
 
