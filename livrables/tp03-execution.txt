@@ -1,0 +1,86 @@
+
+PLAY [Durcissement minimal] ****************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [bastion]
+ok: [monitor]
+ok: [app]
+
+TASK [Creer le compte d'administration] ****************************************
+ok: [bastion]
+ok: [monitor]
+ok: [app]
+
+TASK [Deposer la cle publique] *************************************************
+ok: [bastion]
+ok: [monitor]
+ok: [app]
+
+TASK [Deposer la surcharge de durcissement SSH] ********************************
+ok: [bastion]
+ok: [monitor]
+ok: [app]
+
+TASK [Installer ufw] ***********************************************************
+ok: [bastion]
+ok: [monitor]
+ok: [app]
+
+TASK [Autoriser SSH] ***********************************************************
+ok: [bastion]
+ok: [monitor]
+ok: [app]
+
+TASK [Activer le pare-feu en refus par defaut] *********************************
+ok: [app]
+ok: [bastion]
+ok: [monitor]
+
+PLAY RECAP *********************************************************************
+app                        : ok=7    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+bastion                    : ok=7    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+monitor                    : ok=7    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Durcissement minimal] ****************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [bastion]
+ok: [app]
+ok: [monitor]
+
+TASK [Creer le compte d'administration] ****************************************
+ok: [bastion]
+ok: [app]
+ok: [monitor]
+
+TASK [Deposer la cle publique] *************************************************
+ok: [bastion]
+ok: [app]
+ok: [monitor]
+
+TASK [Deposer la surcharge de durcissement SSH] ********************************
+ok: [bastion]
+ok: [monitor]
+ok: [app]
+
+TASK [Installer ufw] ***********************************************************
+ok: [bastion]
+ok: [monitor]
+ok: [app]
+
+TASK [Autoriser SSH] ***********************************************************
+ok: [bastion]
+ok: [monitor]
+ok: [app]
+
+TASK [Activer le pare-feu en refus par defaut] *********************************
+ok: [bastion]
+ok: [app]
+ok: [monitor]
+
+PLAY RECAP *********************************************************************
+app                        : ok=7    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+bastion                    : ok=7    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+monitor                    : ok=7    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

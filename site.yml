@@ -1,0 +1,57 @@
+---
+- name: Durcissement minimal
+  hosts: durcies
+  become: true
+
+  tasks:
+    - name: Creer le compte d'administration
+      ansible.builtin.user:
+        name: ops
+        shell: /bin/bash
+        groups: sudo
+        append: true
+        create_home: true
+        password: '!'
+
+    - name: Deposer la cle publique
+      ansible.posix.authorized_key:
+        user: ops
+        key: "{{ lookup('file', lookup('env', 'HOME') + '/.ssh/id_lab.pub') }}"
+        exclusive: true
+
+    - name: Deposer la surcharge de durcissement SSH
+      ansible.builtin.copy:
+        dest: /etc/ssh/sshd_config.d/99-durcissement.conf
+        content: |
+          PasswordAuthentication no
+          PermitRootLogin no
+          AllowUsers ops ubuntu
+        owner: root
+        group: root
+        mode: '0600'
+        validate: '/usr/sbin/sshd -t -f %s'
+      notify: Recharger ssh
+
+    - name: Installer ufw
+      ansible.builtin.apt:
+        name: ufw
+        state: present
+
+    - name: Autoriser SSH
+      community.general.ufw:
+        rule: allow
+        port: '22'
+        proto: tcp
+        comment: administration
+
+    - name: Activer le pare-feu en refus par defaut
+      community.general.ufw:
+        state: enabled
+        policy: deny
+        direction: incoming
+
+  handlers:
+    - name: Recharger ssh
+      ansible.builtin.systemd_service:
+        name: ssh
+        state: reloaded
