@@ -1,7 +1,0 @@
----
-- name: Socle et durcissement
-  hosts: durcies
-  become: true
-  roles:
-    - role: hardening
-      tags: [durcissement]
