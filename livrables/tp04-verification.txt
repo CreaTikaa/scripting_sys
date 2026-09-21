@@ -1,0 +1,6 @@
+$ANSIBLE_VAULT;1.1;AES256
+historique propre
+app                        : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+bastion                    : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+monitor                    : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
