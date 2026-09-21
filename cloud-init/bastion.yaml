@@ -1,0 +1,21 @@
+#cloud-config
+# bastion
+
+ssh_authorized_keys:
+  - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINvYhHEDFckgnmgOrijSaHCnC8i9okgI2gY6U577dall lab-scripting
+
+package_update: true
+packages:
+  - ansible
+  - ansible-lint
+  - git
+  - python3-pip
+  - tree
+
+write_files:
+  - path: /etc/ssh/ssh_config.d/lab.conf
+    content: |
+      Host app monitor
+        User ubuntu
+        IdentityFile ~/.ssh/id_lab
+        StrictHostKeyChecking accept-new

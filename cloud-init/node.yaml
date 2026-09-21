@@ -1,0 +1,7 @@
+#cloud-config
+# node
+
+ssh_authorized_keys:
+  - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINvYhHEDFckgnmgOrijSaHCnC8i9okgI2gY6U577dall lab-scripting
+
+package_update: true
