@@ -1,9 +1,6 @@
-# Projet Scripting Système
+### scripting 
 
-- Mathis RINGENBACH
-- Matys PHILLIPON-GOUIN
-- Emré YAPMIS
-
+- Mathis RINGENBACH / - Matys PHILLIPON-GOUIN / - Emré YAPMIS
 
 ![art](bus.jpeg)
 
