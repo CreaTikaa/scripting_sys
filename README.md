@@ -5,5 +5,5 @@
 - Emré YAPMIS
 
 
-![art](/home/crea/Pictures/bus.jpg)
+![art](bus.jpg)
 
