@@ -1,0 +1,6 @@
+---
+admin_user: ops
+admin_pubkey: "{{ lookup('file', lookup('env', 'HOME') + '/.ssh/id_lab.pub') }}"
+
+# Le mot de passe ne vit que dans le coffre.
+labapp_mot_de_passe_base: "{{ vault_labapp_mot_de_passe_base }}"

@@ -1,0 +1,3 @@
+---
+# Ports ouverts en plus de SSH. Surcharge par host_vars.
+hardening_ports_ouverts: []

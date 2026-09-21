@@ -1,0 +1,10 @@
+---
+# L'ordre compte. On cree le compte et on depose sa cle AVANT de fermer
+# l'acces par mot de passe : sinon on se verrouille dehors.
+- name: Comptes et acces
+  ansible.builtin.import_tasks: comptes.yml
+  tags: [comptes]
+
+- name: Service SSH
+  ansible.builtin.import_tasks: ssh.yml
+  tags: [ssh]
